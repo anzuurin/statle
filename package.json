@@ -1,0 +1,21 @@
+{
+  "name": "statle",
+  "version": "1.0.0",
+  "description": "## Overview **Statle** is a designed to make sharing and comparing daily game stats simple and fun. Statle collects your group's results and generates a leaderboard for each game and overall rankings. Add your friends and let the games begin!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
