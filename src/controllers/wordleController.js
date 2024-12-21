@@ -1,15 +1,17 @@
 const path = require('path');
 
-const showGreetingForm = (req, res) => {
+const showWordleForm = (req, res) => {
     res.sendFile(path.join(__dirname, '../views/wordleScore.html'));
 };
 
-const createGreeting = (req, res) => {
+// parses input text and returns just the score
+const createWordleScore = (req, res) => {
     const score = req.body.username;
-    res.json({ message: `here is your score: ${score}!` });
+    const scoreArray = score.split(" ")[2].split("\r\n")[0];
+    res.json({ message: `here is your score: ${scoreArray}!` });
 };
 
 module.exports = {
-    showGreetingForm,
-    createGreeting
+    showWordleForm,
+    createWordleScore
 };
