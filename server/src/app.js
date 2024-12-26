@@ -4,6 +4,7 @@ const path = require('path');
 //import routes
 const wordleRoutes = require('./routes/wordleRoute');
 const connectionsRoute = require('./routes/connectionsRoute');
+const strandsRoute = require('./routes/strandsRoute');
 
 const app = express();
 
@@ -12,6 +13,6 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'views'))); //serves front end
 
 // app.use('/', wordleRoutes);
-app.use('/', connectionsRoute);
+app.use('/', strandsRoute);
 
 module.exports = app;
