@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 router.post('/input', (req, res) => {
     const score = req.body.score;
     const scoreArray = score.split("\r\n");
+    const spotleID = scoreArray[0].split(" ")[1].slice(1, -2); // gets the spotle of the day
     var passedSpotle = false;
     // checks if they got it right in the end
     if (scoreArray[2].slice(-2) ==="🟩" || scoreArray[2].slice(-2) ==="🎁") {
