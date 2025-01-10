@@ -17,7 +17,7 @@ router.post('/input', (req, res) => {
     // checks if they got it right in the end
     if (scoreArray[2].slice(-2) ==="🟩" || scoreArray[2].slice(-2) ==="🎁") {
         passedSpotle = true;
-        const guessCount = scoreArray[2].length-1; // for some reason, the last emoji adds 2 to the length
+        const guessCount = scoreArray[2].length-1; // for some reason, only the last emoji adds 2 to the length
         res.json({ message: `You got the spotle in ${guessCount} guesses!` });
     }
     else {
